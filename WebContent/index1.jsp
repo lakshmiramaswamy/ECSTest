@@ -88,7 +88,7 @@
                      
                  <!-- comment --> 
                      
-             
+             <!--
                <tr>
                         
                         <td><input type="reset" value="Reset" /></td>
@@ -99,7 +99,7 @@
                         <td colspan="2"><a href="index.jsp">Register Now</a></td>
                     </tr>
                 </tbody>
-            </table> 
+            </table> -->
             
 
             
