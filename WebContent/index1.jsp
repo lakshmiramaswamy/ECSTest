@@ -73,7 +73,7 @@
                         <td><input type="password" name="Password" value="" /></td>
                     </tr>
                    
-       			<!--  	<tr>
+       			  	<tr>
                        <td><font color=tan size=4 face="Verdana">Login as</font></td>
                         <td><select >
 <option value="Administrator">Admin</option>
@@ -81,7 +81,7 @@
 
 
 </td>
-                    </tr>  -->
+                    </tr>  
                     <!-- HELLO -->>
                     
                 
