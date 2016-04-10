@@ -72,7 +72,7 @@
                         <td><font color=tan size=4 face="Verdana">Password</font></td>
                         <td><input type="password" name="Password" value="" /></td>
                     </tr>
-                   <! -- Comment here -->>
+                  
        			  	<tr>
                        <td><font color=tan size=4 face="Verdana">Login as</font></td>
                         <td><select >
@@ -93,7 +93,7 @@
             
            
                         
-                        <td><input type="reset" value="Reset" /></td>
+                      <td><input type="reset" value="Reset" /></td>
                          <td><input type="submit" value="Login" /></td> 
                     </tr>  
                     
