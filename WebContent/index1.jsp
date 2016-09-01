@@ -75,7 +75,7 @@
                  
        		
     	<tr>
-                       <td><font color=tan size=4 face="Verdana">My Login</font></td>
+                       <td><font color=tan size=4 face="Verdana">Customer Login</font></td>
                         <td><select >
 <option value="Administrator">Admin </option>
 <option value="User">User</option></select>
