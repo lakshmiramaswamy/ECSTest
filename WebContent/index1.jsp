@@ -74,7 +74,7 @@
                     </tr>
                  
        		
-    	<tr>
+    <!--	<tr>
                        <td><font color=tan size=4 face="Verdana">Login as</font></td>
                         <td><select >
 <option value="Administrator">Admin </option>
@@ -84,7 +84,7 @@
 </td>
 		
              
-                </tr> 
+                </tr> -->
             
                      <td><input type="reset" value="Reset" /></td>
                          <td><input type="submit" value="Login" /></td>  
