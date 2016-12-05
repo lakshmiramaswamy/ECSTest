@@ -43,10 +43,7 @@
 			<td align="left"></td>
 			<td align="center" ></td>
 			
-			 <td align="right" >  <img
-					  alt="Agility Platform Logo"
-					src="<%=request.getContextPath()%>/images/AP.png"
-					border="0" style="height: 80px ; width: 150px ; position: fixed; bottom: 0px; right: 30px; "/>   </td>   
+			 <td align="right" >    </td>   
 		</tr> 
 
 
