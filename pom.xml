@@ -8,7 +8,7 @@
   <description>Application for customer onboarding</description>
   <build>
     <sourceDirectory>src/bean</sourceDirectory>
-    <testSourceDirectory>src/bean/JunitTest</testSourceDirectory> 
+    <testSourceDirectory>src/bean/</testSourceDirectory> 
     <plugins>
       <plugin>
         <artifactId>maven-war-plugin</artifactId>
