@@ -95,7 +95,7 @@
 		<dependency>
 			<groupId>HtmlUnit</groupId>
 			<artifactId>HtmlUnit</artifactId>
-			<version>2.26</version>
+			<version>1.9</version>
 		</dependency>
 	
 		<dependency>
