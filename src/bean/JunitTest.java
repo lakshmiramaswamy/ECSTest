@@ -3,7 +3,7 @@ import static net.sourceforge.jwebunit.junit.JWebUnit.*;
 import org.junit.Before;
 import org.junit.Test;
 
-public class JWebUnit {
+public class JunitTest {
 
 		@Before
 		public void setup(){
