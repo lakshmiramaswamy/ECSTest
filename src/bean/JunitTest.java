@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class JunitTest {
 
-	/*	@Before
+		@Before
 		public void setup(){
 			setBaseUrl("http://localhost:8081/CustomerOnBoard/");
 			
@@ -20,5 +20,5 @@ public class JunitTest {
 	        submit();
 	        assertTitleEquals("Registration Form");
 		}
-	*/	
+		
 }
