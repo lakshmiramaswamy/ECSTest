@@ -7,7 +7,7 @@ public class JunitTest {
 
 		@Before
 		public void setup(){
-			setBaseUrl("http://localhost:8081/CustomerOnBoard/");
+			setBaseUrl("http://localhost:8080/CustomerOnBoard/");
 			
 		}
 		@Test
