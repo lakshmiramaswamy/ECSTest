@@ -7,7 +7,7 @@ public class JunitTest {
 
 		@Before
 		public void setup(){
-			setBaseUrl("http://10.0.0.116:8080/job/JunitTest1/ws/WebContent/index1.jsp");
+			setBaseUrl("http://10.0.0.116:8080/job/JunitTest1/ws/WebContent/");
 			
 		}
 		@Test
