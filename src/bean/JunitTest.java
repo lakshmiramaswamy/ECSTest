@@ -12,7 +12,7 @@ public class JunitTest {
 		}
 		@Test
 		public void test(){
-			beginAt("index1.jsp"); 
+			beginAt("index.jsp"); 
 	        //clickLink("login");
 	        assertTitleEquals("Login page");
 	        setTextField("Uname", "admin");
