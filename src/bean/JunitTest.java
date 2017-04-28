@@ -10,7 +10,7 @@ public class JunitTest {
 			setBaseUrl("http://10.0.0.116:8080/job/JunitTest1/ws/WebContent/");
 			
 		}
-		@Test
+		/*@Test
 		public void test(){
 			beginAt("index.jsp"); 
 	        //clickLink("login");
@@ -19,6 +19,6 @@ public class JunitTest {
 	        setTextField("Password", "admin");
 	        submit();
 	        assertTitleEquals("Registration Form");
-		}
+		}*/
 		
 }
