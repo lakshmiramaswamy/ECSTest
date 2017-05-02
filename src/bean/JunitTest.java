@@ -7,18 +7,19 @@ public class JunitTest {
 
 		@Before
 		public void setup(){
-			setBaseUrl("http://10.0.0.116:8080/job/JunitTest1/ws/WebContent/index1.jsp");
+			setBaseUrl("http://10.0.0.116:8080/job/JunitTest1/ws/WebContent/");
 			
 		}
 		@Test
 		public void test(){
-		//	beginAt("index.jsp"); 
-	        //clickLink("login");
-	       // assertTitleEquals("Login page");
+			beginAt("index1.jsp"); 
+	        
+	        assertTitleEquals("Login page");
 	       // setTextField("Uname", "admin");
 	        ///setTextField("Password", "admin");
 	        //submit();
-	       // assertTitleEquals("Registration Form");
+			clickLink("Register Now");
+	        assertTitleEquals("Registration Form");
 		}
 		
 }
