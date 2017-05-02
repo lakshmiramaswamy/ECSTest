@@ -13,7 +13,7 @@ public class JunitTest {
 		@Test
 		public void test(){
 			//beginAt("index1.jsp"); 
-	        
+	        beginAt("");
 	        assertTitleEquals("Login page");
 	       // setTextField("Uname", "admin");
 	        ///setTextField("Password", "admin");
