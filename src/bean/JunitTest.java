@@ -1,3 +1,6 @@
+
+package bean;
+
 import static net.sourceforge.jwebunit.junit.JWebUnit.*;
 
 import org.junit.Before;
