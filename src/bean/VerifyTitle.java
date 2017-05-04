@@ -1,5 +1,8 @@
 package bean;
 import org.openqa.selenium.WebDriver;
+
+import org.junit.Test;
+
 public class VerifyTitle{
   @Test
   public void test(){
