@@ -2,9 +2,6 @@ package bean;
 import static net.sourceforge.jwebunit.junit.JWebUnit.*;
 
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.Assert;
 
 public class JunitTest {
 
