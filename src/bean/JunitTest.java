@@ -12,7 +12,7 @@ public class JunitTest {
 		}*/
 		@Test
 		public void testOne(){
-			beginAt("http://10.0.0.108:8080/job/JunitTest1/ws/WebContent//index1.jsp"); 
+			beginAt("http://localhost:8080/job/JunitTest1/ws/WebContent/index1.jsp"); 
 	        
 	        assertTitleEquals("Login page");
 	       // setTextField("Uname", "admin");
