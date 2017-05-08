@@ -12,7 +12,7 @@ public class JunitTest {
 			setBaseUrl("http://localhost:8081/CustomerOnBoard/");
 			//http://10.0.0.116:8080/job/JunitTest1/ws/WebContent/
 		}*/
-		/*@Test
+		@Test
 		public void testOne(){
 			beginAt("http://10.0.0.108:8080/job/JunitTest1/ws/WebContent/index1.jsp"); 
 	        
@@ -22,7 +22,7 @@ public class JunitTest {
 	      clickLink("register");
 	        //submit();
 	        assertTitleEquals("Registration Form");
-		}*/
+		}
 		
 		@Test
 		 public void testTwo(){
