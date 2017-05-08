@@ -1,7 +1,9 @@
 package bean;
 import static net.sourceforge.jwebunit.junit.JWebUnit.*;
-
 import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
 
 public class JunitTest {
 
@@ -22,13 +24,13 @@ public class JunitTest {
 	        assertTitleEquals("Registration Form");
 		}
 		
-		/*@Test
+		@Test
 		 public void testTwo(){
 		   WebDriver driver = new FirefoxDriver();
-		   driver.get("http://localhost:8081/CustomerOnBoard/index1.jsp");
+		   driver.get("http://10.0.0.108:8080/job/JunitTest1/ws/WebContent/index1.jsp");
 		   //driver.get("http://10.0.0.108:8080/job/JunitTest1/ws/WebContent/index1.jsp");
 		  Assert.assertTrue(driver.getTitle().contains("Login Page"));
-		    }*/
+		 }
 		
 }
 
