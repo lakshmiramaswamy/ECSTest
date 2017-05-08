@@ -7,7 +7,7 @@ import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Assert;
 
 public class JunitTest {
-
+		String url = "http://10.0.0.108:8080/job/JunitTest1/ws/WebContent/index1.jsp";
 		/*@Before
 		public void setup(){
 			setBaseUrl("http://localhost:8081/CustomerOnBoard/");
@@ -15,7 +15,7 @@ public class JunitTest {
 		}*/
 		@Test
 		public void testOne(){
-			beginAt("http://10.0.0.108:8080/job/JunitTest1/ws/WebContent/index1.jsp"); 
+			beginAt(url); 
 	        
 	        assertTitleEquals("Login page");
 	       // setTextField("Uname", "admin");
@@ -27,9 +27,9 @@ public class JunitTest {
 		
 		@Test
 		 public void testTwo(){
-		   WebDriver driver = new SafariDriver();
-		   driver.get("http://10.0.0.108:8080/job/JunitTest1/ws/WebContent/index1.jsp");
+		   WebDriver driver = new FirefoxDriver();
 		   //driver.get("http://10.0.0.108:8080/job/JunitTest1/ws/WebContent/index1.jsp");
+		   driver.get(url);
 		  Assert.assertTrue(driver.getTitle().contains("Login Page"));
 		 }
 		
