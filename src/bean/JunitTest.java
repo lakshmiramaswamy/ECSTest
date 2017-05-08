@@ -26,12 +26,12 @@ public class JunitTest {
 		}
 		
 		@Test
-		 //public void testTwo(){
-		  // WebDriver driver = new FirefoxDriver();
-		   //driver.get("http://10.0.0.108:8080/job/JunitTest1/ws/WebContent/index1.jsp");
-		   //driver.get(url);
-		 // Assert.assertTrue(driver.getTitle().contains("Login Page"));
-		// }
+		 public void testTwo(){
+		   WebDriver driver = new FirefoxDriver();
+		   driver.get("http://10.0.0.108:8080/job/JunitTest1/ws/WebContent/index1.jsp");
+		   driver.get(url);
+		 Assert.assertTrue(driver.getTitle().contains("Login Page"));
+		 }
 		
 }
 
