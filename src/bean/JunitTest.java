@@ -18,20 +18,20 @@ public class JunitTest {
 			beginAt(url); 
 	        
 	        assertTitleEquals("Login page");
-	       // setTextField("Uname", "admin");
-	       // setTextField("Password", "admin");
+	       setTextField("Uname", "admin");
+	        setTextField("Password", "admin");
 	      clickLink("register");
 	        //submit();
 	        assertTitleEquals("Registration Form");
 		}
 		
 		@Test
-		 public void testTwo(){
-		   WebDriver driver = new FirefoxDriver();
+		 //public void testTwo(){
+		  // WebDriver driver = new FirefoxDriver();
 		   //driver.get("http://10.0.0.108:8080/job/JunitTest1/ws/WebContent/index1.jsp");
-		   driver.get(url);
-		  Assert.assertTrue(driver.getTitle().contains("Login Page"));
-		 }
+		   //driver.get(url);
+		 // Assert.assertTrue(driver.getTitle().contains("Login Page"));
+		// }
 		
 }
 
