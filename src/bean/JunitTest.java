@@ -3,6 +3,7 @@ import static net.sourceforge.jwebunit.junit.JWebUnit.*;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Assert;
 
 public class JunitTest {
@@ -26,7 +27,7 @@ public class JunitTest {
 		
 		@Test
 		 public void testTwo(){
-		   WebDriver driver = new FirefoxDriver();
+		   WebDriver driver = new SafariDriver();
 		   driver.get("http://10.0.0.108:8080/job/JunitTest1/ws/WebContent/index1.jsp");
 		   //driver.get("http://10.0.0.108:8080/job/JunitTest1/ws/WebContent/index1.jsp");
 		  Assert.assertTrue(driver.getTitle().contains("Login Page"));
