@@ -24,14 +24,14 @@ public class JunitTest {
 	        assertTitleEquals("Registration Form");
 		}
 		
-		@Test
+		/*@Test
 		 public void testTwo(){
 	           System.setProperty("webdriver.gecko.driver", "c:/temp/geckodriver.exe"); 
 		   WebDriver driver = new FirefoxDriver();
 		   driver.get("http://10.0.0.108:8080/job/JunitTest1/ws/WebContent/index1.jsp");
 		   driver.get(url);
 		 Assert.assertTrue(driver.getTitle().contains("Login Page"));
-		 }
+		 }*/
 		
 }
 
