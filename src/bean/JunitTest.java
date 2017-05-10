@@ -11,27 +11,15 @@ import com.gargoylesoftware.htmlunit.javascript.host.file.File;
 import org.junit.Test;
 
 public class JunitTest {
-		String url = "http://localhost:8080/job/Selenium/ws/WebContent/index1.jsp";
-		/*@Before
-		public void setup(){
-			setBaseUrl("http://localhost:8081/CustomerOnBoard/");
-			//http://10.0.0.116:8080/job/JunitTest1/ws/WebContent/
-		}*/
-		/*@Test
-		public void testOne(){
-			beginAt(url); 
-	        
-	        assertTitleEquals("Login page");
-	       setTextField("Uname", "admin");
-	        setTextField("Password", "admin");
-	      clickLink("register");
-	        //submit();
-	        assertTitleEquals("Registration Form");
-		}*/
+	public static void main(String[] args){
 		
-		@Test
-		 public void testTwo(){ 
-			 System.setProperty("webdriver.gecko.driver","C:\\Program Files\\geckodriver.exe");
+		
+		String url = "http://localhost:8080/job/Selenium/ws/WebContent/index1.jsp";
+		
+		
+		//@Test
+		// public void testTwo(){ 
+			// System.setProperty("webdriver.gecko.driver","C:\\Program Files\\geckodriver.exe");
 		   WebDriver driver = new FirefoxDriver();
 			//File file = new File("C:\\Program Files\\IEDriverServer.exe");
 			//System.setProperty("webdriver.ie.driver",file.getAbsolutePath());
@@ -41,7 +29,8 @@ public class JunitTest {
 		   	driver.get(url);
 		 	Assert.assertTrue(driver.getTitle().contains("Login Page"));
 		 }
-		
 }
+		
+
 
 
