@@ -84,7 +84,7 @@
 			<artifactId>jwebunit-htmlunit-plugin</artifactId>
 			<version>3.3</version>
 		</dependency>
-		<!--<dependency>
+		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>1.7.21</version>
@@ -94,7 +94,7 @@
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
-		</dependency>-->
+		</dependency>
 		<dependency>
 			<groupId>htmlunit</groupId>
 			<artifactId>htmlunit</artifactId>
