@@ -27,6 +27,8 @@ public class JunitTest {
 		@Test
 		 public void testTwo(){ 
 		    WebDriver driver = new InternetExplorerDriver();
+			  System.getProperty("webdriver.ie.driver");
+	   System.setProperty("Path", "C:\\Program Files\\IEDriverServer.exe");
 		  // driver.get("http://localhost:8080/job/Selenium/ws/WebContent/index1.jsp");
 		   driver.get(url);
 		 Assert.assertTrue(driver.getTitle().contains("Login Page"));
