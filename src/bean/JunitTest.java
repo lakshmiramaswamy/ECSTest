@@ -33,7 +33,7 @@ public class JunitTest {
 		 public void testTwo(){ 
 		   // WebDriver driver = new InternetExplorerDriver();
 			File file = new File("C:\\Program Files\\IEDriverServer.exe");
-			System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
+			System.setProperty("webdriver.ie.driver",file.getAbsolutePath());
 			WebDriver driver = new InternetExplorerDriver();
 			System.setProperty("webdriver.ie.driver", "IEDriverServer.exe"); 
 		  // driver.get("http://localhost:8080/job/Selenium/ws/WebContent/index1.jsp");
