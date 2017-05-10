@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.testng.annotations.test;
 import org.testng.Assert;
 
 import com.gargoylesoftware.htmlunit.javascript.host.file.File;
@@ -17,7 +18,7 @@ public class JunitTest {
 		//String url = "http://localhost:8080/job/Selenium/ws/WebContent/index1.jsp";
 		
 		
-		//@Test
+		@Test
 		// public void testTwo(){ 
 			// System.setProperty("webdriver.gecko.driver","C:\\Program Files\\geckodriver.exe");
 		   WebDriver driver = new FirefoxDriver();
