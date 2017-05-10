@@ -32,7 +32,7 @@ public class JunitTest {
 		@Test
 		 public void testTwo(){ 
 		   // WebDriver driver = new InternetExplorerDriver();
-			File file = new File("C:\Program Files\Internet Explorer");
+			File file = new File("C:\Program Files\Internet Explorer\iexplore");
 			System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
 			WebDriver driver = new InternetExplorerDriver();
 			System.setProperty("webdriver.ie.driver", "IEDriverServer.exe"); 
