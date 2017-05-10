@@ -6,13 +6,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 
 public class JunitTest {
-		String url = "http://10.0.0.108:8080/job/JunitTest1/ws/WebContent/index1.jsp";
+		String url = "http://10.0.0.10:8080/job/JunitTest1/ws/WebContent/index1.jsp";
 		/*@Before
 		public void setup(){
 			setBaseUrl("http://localhost:8081/CustomerOnBoard/");
 			//http://10.0.0.116:8080/job/JunitTest1/ws/WebContent/
 		}*/
-		/*@Test
+		@Test
 		public void testOne(){
 			beginAt(url); 
 	        
@@ -22,12 +22,12 @@ public class JunitTest {
 	      clickLink("register");
 	        //submit();
 	        assertTitleEquals("Registration Form");
-		}*/
+		}
 		
 		@Test
 		 public void testTwo(){ 
 		   WebDriver driver = new FirefoxDriver();
-		   driver.get("http://10.0.0.108:8080/job/JunitTest1/ws/WebContent/index1.jsp");
+		   driver.get("http://10.0.0.10:8080/job/JunitTest1/ws/WebContent/index1.jsp");
 		   driver.get(url);
 		 Assert.assertTrue(driver.getTitle().contains("Login Page"));
 		 }
