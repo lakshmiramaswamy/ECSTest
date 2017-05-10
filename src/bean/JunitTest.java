@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
-import org.testng.annotations.test;
+import org.testng.annotations.Test;
 import org.testng.Assert;
 
 import com.gargoylesoftware.htmlunit.javascript.host.file.File;
