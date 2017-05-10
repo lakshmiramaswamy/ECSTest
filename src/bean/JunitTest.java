@@ -20,8 +20,8 @@ public class JunitTest {
 		
 		@Test
 		public void testTwo(){ 
-			//System.setProperty("webdriver.gecko.driver","C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
-			System.setProperty("webdriver.gecko.driver","http://localhost:8080/job/Selenium/ws/WebContent/index1.jsp");
+			System.setProperty("webdriver.gecko.driver","C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
+			
 			//System.setProperty("webdriver.gecko.driver","C:\\Program Files\\geckodriver.exe");
 		   WebDriver driver = new FirefoxDriver();
 			//File file = new File("C:\\Program Files\\IEDriverServer.exe");
@@ -29,7 +29,7 @@ public class JunitTest {
 			//WebDriver driver = new InternetExplorerDriver();
 			//System.setProperty("webdriver.ie.driver", "IEDriverServer.exe"); 
 		  // driver.get("http://localhost:8080/job/Selenium/ws/WebContent/index1.jsp");
-		   	driver.get("C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
+		   	driver.get("http://localhost:8080/job/Selenium/ws/WebContent/index1.jsp");
 		 	Assert.assertTrue(driver.getTitle().contains("Login Page"));
 		 }
 }
