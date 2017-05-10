@@ -20,7 +20,7 @@ public class JunitTest {
 		
 		@Test
 		public void testTwo(){ 
-			// System.setProperty("webdriver.gecko.driver","C:\\Program Files\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver","C:\\Program Files\\geckodriver.exe");
 		   WebDriver driver = new FirefoxDriver();
 			//File file = new File("C:\\Program Files\\IEDriverServer.exe");
 			//System.setProperty("webdriver.ie.driver",file.getAbsolutePath());
