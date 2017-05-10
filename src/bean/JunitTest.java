@@ -1,9 +1,14 @@
 package bean;
 import static net.sourceforge.jwebunit.junit.JWebUnit.*;
-import org.junit.Test;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Assert;
+
+import com.gargoylesoftware.htmlunit.javascript.host.file.File;
+
+import org.junit.Test;
 
 public class JunitTest {
 		String url = "http://localhost:8080/job/Selenium/ws/WebContent/index1.jsp";
@@ -26,11 +31,14 @@ public class JunitTest {
 		
 		@Test
 		 public void testTwo(){ 
-		    WebDriver driver = new InternetExplorerDriver();
-			 
+		   // WebDriver driver = new InternetExplorerDriver();
+			File file = new File("C:\\Program Files\\iexploredriver.exe");
+			System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
+			WebDriver driver = new InternetExplorerDriver();
+			System.setProperty("webdriver.ie.driver", "IEDriverServer.exe"); 
 		  // driver.get("http://localhost:8080/job/Selenium/ws/WebContent/index1.jsp");
-		   driver.get(url);
-		 Assert.assertTrue(driver.getTitle().contains("Login Page"));
+		   	driver.get(url);
+		 	Assert.assertTrue(driver.getTitle().contains("Login Page"));
 		 }
 		
 }
