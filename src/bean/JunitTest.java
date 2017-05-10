@@ -12,14 +12,14 @@ import com.gargoylesoftware.htmlunit.javascript.host.file.File;
 //import org.junit.Test;
 
 public class JunitTest {
-	public static void main(String[] args){
+	//public static void main(String[] args){
 		
 		
 		//String url = "http://localhost:8080/job/Selenium/ws/WebContent/index1.jsp";
 		
 		
 		@Test
-		// public void testTwo(){ 
+		public void testTwo(){ 
 			// System.setProperty("webdriver.gecko.driver","C:\\Program Files\\geckodriver.exe");
 		   WebDriver driver = new FirefoxDriver();
 			//File file = new File("C:\\Program Files\\IEDriverServer.exe");
