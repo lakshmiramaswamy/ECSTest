@@ -2,7 +2,7 @@ package bean;
 import static net.sourceforge.jwebunit.junit.JWebUnit.*;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.Assert;
 
 public class JunitTest {
@@ -12,7 +12,7 @@ public class JunitTest {
 			setBaseUrl("http://localhost:8081/CustomerOnBoard/");
 			//http://10.0.0.116:8080/job/JunitTest1/ws/WebContent/
 		}*/
-		@Test
+		/*@Test
 		public void testOne(){
 			beginAt(url); 
 	        
@@ -22,12 +22,12 @@ public class JunitTest {
 	      clickLink("register");
 	        //submit();
 	        assertTitleEquals("Registration Form");
-		}
+		}*/
 		
 		@Test
 		 public void testTwo(){ 
-		   WebDriver driver = new FirefoxDriver();
-		   driver.get("http://localhost:8080/job/Selenium/ws/WebContent/index1.jsp");
+		    WebDriver driver = new InternetExplorerDriver();
+		  // driver.get("http://localhost:8080/job/Selenium/ws/WebContent/index1.jsp");
 		   driver.get(url);
 		 Assert.assertTrue(driver.getTitle().contains("Login Page"));
 		 }
