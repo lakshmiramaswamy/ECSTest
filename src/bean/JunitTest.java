@@ -9,7 +9,7 @@ import org.testng.Assert;
 
 import com.gargoylesoftware.htmlunit.javascript.host.file.File;
 
-import org.junit.Test;
+//import org.junit.Test;
 
 public class JunitTest {
 	public static void main(String[] args){
