@@ -14,10 +14,10 @@ public class JunitTest {
 	public static void main(String[] args){
 		
 		
-		String url = "http://localhost:8080/job/Selenium/ws/WebContent/index1.jsp";
+		//String url = "http://localhost:8080/job/Selenium/ws/WebContent/index1.jsp";
 		
 		
-		//@Test
+		@Test
 		// public void testTwo(){ 
 			// System.setProperty("webdriver.gecko.driver","C:\\Program Files\\geckodriver.exe");
 		   WebDriver driver = new FirefoxDriver();
@@ -26,7 +26,7 @@ public class JunitTest {
 			//WebDriver driver = new InternetExplorerDriver();
 			//System.setProperty("webdriver.ie.driver", "IEDriverServer.exe"); 
 		  // driver.get("http://localhost:8080/job/Selenium/ws/WebContent/index1.jsp");
-		   	driver.get(url);
+		   	driver.get("http://localhost:8080/job/Selenium/ws/WebContent/index1.jsp");
 		 	Assert.assertTrue(driver.getTitle().contains("Login Page"));
 		 }
 }
