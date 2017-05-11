@@ -8,7 +8,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 
 public class JunitTest {
-	public static WebDriver driver = null;
+	public WebDriver driver = null;
 
 	@Test
 	public void testTwo() {
