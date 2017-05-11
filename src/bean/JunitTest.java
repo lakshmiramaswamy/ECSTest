@@ -2,6 +2,7 @@ package bean;
 import static net.sourceforge.jwebunit.junit.JWebUnit.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
 //import org.testng.annotations.Test;
