@@ -199,6 +199,12 @@
     			<artifactId>webdriver-common</artifactId>
     			<version>0.9.7376</version>
 		</dependency>
+		
+		<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>1.6.2</version>
+</dependency
 
 	</dependencies>
 
