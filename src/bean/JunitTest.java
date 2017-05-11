@@ -3,6 +3,7 @@ package bean;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 //import org.testng.annotations.Test;
 import org.testng.Assert;
 
