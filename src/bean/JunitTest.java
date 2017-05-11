@@ -23,6 +23,6 @@ FirefoxBinary binary = new FirefoxBinary(new File(“C:/Program Files/Mozilla Fi
           Assert.assertTrue(driver.getTitle().contains(“Login Page”));
             }
 		
-
+		     }
 
 
