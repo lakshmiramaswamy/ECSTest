@@ -11,7 +11,7 @@ public class JunitTest {
 
 	@Test
 	public void testTwo() {
-		System.setProperty("webdriver.gecko.driver", "C:\\Program Files\\Mozilla Firefox\\firefox.exe");
+		System.setProperty("webdriver.gecko.driver", "C:\\Program Files\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.get("http://localhost:8080/CustomerOnBoard/index1.jsp");
 		// driver.get("http://10.0.0.108:8080/job/JunitTest1/ws/WebContent/index1.jsp");
