@@ -12,10 +12,10 @@ import com.gargoylesoftware.htmlunit.javascript.host.file.File;
 import org.junit.Test;
 
 public class JunitTest {
-	
+public static WebDriver driver =null;
 	@Test
 		 public void testTwo(){
-		   WebDriver driver = new FirefoxDriver();
+		   driver = new FirefoxDriver();
 		   driver.get("http://localhost:8081/CustomerOnBoard/index1.jsp");
 		   //driver.get("http://10.0.0.108:8080/job/JunitTest1/ws/WebContent/index1.jsp");
 		  Assert.assertTrue(driver.getTitle().contains("Login Page"));
