@@ -13,7 +13,7 @@ public class JunitTest {
 	public void testTwo() {
 		System.setProperty("webdriver.gecko.driver", "C:\\Program Files\\Mozilla Firefox\\firefox.exe");
 		driver = new FirefoxDriver();
-		driver.get("http://localhost:8081/CustomerOnBoard/index1.jsp");
+		driver.get("http://localhost:8080/CustomerOnBoard/index1.jsp");
 		// driver.get("http://10.0.0.108:8080/job/JunitTest1/ws/WebContent/index1.jsp");
 		Assert.assertTrue(driver.getTitle().contains("Login Page"));
 	}
