@@ -12,7 +12,8 @@ public class JunitTest {
 
 	@Test
 	public void testTwo() {
-		System.setProperty("webdriver.gecko.driver", "C:\\Program Files\\geckodriver.exe");
+		System.setProperty("webdriver.firefox.marionette", "C:\\Program Files\\geckodriver.exe");
+		//System.setProperty("webdriver.gecko.driver", "C:\\Program Files\\geckodriver.exe");
 		
 		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 		capabilities.setCapability("marionette", false);
