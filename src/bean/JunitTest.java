@@ -16,11 +16,11 @@ public class JunitTest {
     @Test
          public void testTwo(){
 
-FirefoxBinary binary = new FirefoxBinary(new File(“C:/Program Files/Mozilla Firefox/firefox.exe”)); // Change actual firefox path
-    binary.setEnvironmentProperty(“DISPLAY”,System.getProperty(“lmportal.xvfb.id”,“:99"));
+FirefoxBinary binary = new FirefoxBinary(new File("C:/Program Files/Mozilla Firefox/firefox.exe")); // Change actual firefox path
+    binary.setEnvironmentProperty("DISPLAY",System.getProperty("lmportal.xvfb.id",":99"));
     driver = new FirefoxDriver(binary,null);
-          driver.get(“http://localhost:8081/CustomerOnBoard/index1.jsp“);
-          Assert.assertTrue(driver.getTitle().contains(“Login Page”));
+          driver.get("http://localhost:8081/CustomerOnBoard/index1.jsp");
+          Assert.assertTrue(driver.getTitle().contains("Login Page"));
             }
 		
 		     }
