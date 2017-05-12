@@ -18,7 +18,7 @@ public class JunitTest {
 		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 		capabilities.setCapability("marionette", false);
 		driver = new FirefoxDriver(capabilities);
-		driver.get("http://localhost:8080/CustomerOnBoard/index1.jsp");
+		driver.get("http://localhost:8081/CustomerOnBoard/index1.jsp");
 		//driver.get("http://10.0.0.108:8080/job/JunitTest1/ws/WebContent/index1.jsp");
 		Assert.assertTrue(driver.getTitle().contains("Login Page"));
 	}
