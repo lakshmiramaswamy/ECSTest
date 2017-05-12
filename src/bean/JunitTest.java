@@ -16,7 +16,7 @@ public class JunitTest {
 		System.setProperty("webdriver.gecko.driver", "C:\\Program Files\\geckodriver.exe");
 		
 		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-		capabilities.setCapability("marionette", true);
+		capabilities.setCapability("marionette", false);
 		driver = new FirefoxDriver(capabilities);
 		driver.get("http://localhost:8081/CustomerOnBoard/index1.jsp");
 		//driver.get("http://10.0.0.108:8080/job/JunitTest1/ws/WebContent/index1.jsp");
