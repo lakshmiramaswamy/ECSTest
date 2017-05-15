@@ -8,7 +8,7 @@
 	<name>CustomerOnboard</name>
 	<description>Application for customer onboarding</description>
 	<build>
-		<sourceDirectory>WebContent</sourceDirectory>
+		<sourceDirectory>Java_CustomerOnboard</sourceDirectory>
 		<testSourceDirectory>src/bean/</testSourceDirectory>
 		<plugins>
 			<!--<plugin> <artifactId>maven-war-plugin</artifactId> <version>2.6</version> 
