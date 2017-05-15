@@ -9,6 +9,18 @@ import org.testng.Assert;
 
 public class JunitTest {
 	public WebDriver driver = null;
+	
+	@Test
+		public void testOne(){
+			beginAt("http://10.0.0.10:9090/CustomerOnBoard/index1.jsp"); 
+	        
+	        assertTitleEquals("Login page");
+	       setTextField("Uname", "admin");
+	        setTextField("Password", "admin");
+	      clickLink("register");
+	        //submit();
+	        assertTitleEquals("Registration Form");
+		}
 
 	@Test
 	public void testTwo() {
