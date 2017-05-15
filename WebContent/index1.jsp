@@ -63,7 +63,7 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td><font color=tan size=4 face="Verdana">User Name</font></td>
+						<td><font color=tan size=4 face="Verdana">EMPLOYEE Name</font></td>
 						<td><input type="text" name="Uname" value="" /></td>
 					</tr>
 					<tr>
