@@ -1,6 +1,8 @@
 package bean;
 
 import org.junit.Test;
+import static net.sourceforge.jwebunit.junit.JWebUnit.*;
+import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
