@@ -1,8 +1,7 @@
 package bean;
-
+import static org.junit.Assert.*;
 import org.junit.Test;
-import static net.sourceforge.jwebunit.junit.JWebUnit.*;
-import org.junit.Before;
+i
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -12,7 +11,7 @@ import org.testng.Assert;
 public class JunitTest {
 	public WebDriver driver = null;
 	
-	@Test
+	/*@Test
 		public void testOne(){
 			beginAt("http://10.0.0.10:9090/CustomerOnBoard/index1.jsp"); 
 	        
@@ -22,6 +21,18 @@ public class JunitTest {
 	      clickLink("register");
 	        //submit();
 	        assertTitleEquals("Registration Form");
+		}*/
+	@Test
+		public void testOne(){
+			
+			System.out.println("Junit test case to test getters and setters");
+			String Uname = "Admin";
+			User u = new User();
+			u.setUname(Uname);
+			String getName = u.getUname();
+			assertEquals(getName, Uname);
+		
+		
 		}
 
 	@Test
