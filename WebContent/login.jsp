@@ -19,9 +19,9 @@
     String userid = request.getParameter("Uname");    
     String pwd = request.getParameter("Password");
     Class.forName("com.mysql.jdbc.Driver");
-    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/client_db1","root","x0cloud");
+    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/customer_onboarding","root","root");
    /* String driver = "com.mysql.jdbc.Driver";
-    String connection = "jdbc:mysql://localhost:3306/client_db1";
+    String connection = "jdbc:mysql://localhost:3306/customer_onboarding";
     String user = "root";
     String password = "root";
     Class.forName(driver);
