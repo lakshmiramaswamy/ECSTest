@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>CustomerOnBoard</groupId>
 	<artifactId>CustomerOnBoard</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>${build.number}</version>
 	<packaging>war</packaging>
 	<name>CustomerOnboard</name>
 	<description>Application for customer onboarding</description>
@@ -14,8 +14,7 @@
 	            <plugin>
   <artifactId>maven-war-plugin</artifactId>
   <version>3.0.0</version>
-			    <!--Artifactory dependencies -->
-  <configuration>
+   <configuration>
           <warSourceDirectory>WebContent</warSourceDirectory>
           <failOnMissingWebXml>false</failOnMissingWebXml>
         </configuration>
