@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>CustomerOnBoard</groupId>
 	<artifactId>CustomerOnBoard</artifactId>
-	<version>Project-${build.number}</version>
+	<version>${build.number}</version>
 	<packaging>war</packaging>
 	<name>CustomerOnboard</name>
 	<description>Application for customer onboarding</description>
