@@ -79,7 +79,7 @@ return false;
 				<td align="center"></td>
 
 				<td align="right"><img alt="CSC Logo"
-					src="<%=request.getContextPath()%>/images/CSC_logo.png" border="0"
+					src="<%=request.getContextPath()%>/images/DXC_Logo.png" border="0"
 					style="height: 80px; width: 150px; position: fixed; top: 0px; left: 30px;" />
 				</td>
 			</tr>
