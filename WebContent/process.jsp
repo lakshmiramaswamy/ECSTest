@@ -36,7 +36,7 @@
     Statement st = conn.createStatement();
     ResultSet rs;
    try{
-    int i = st.executeUpdate("insert into user_details(Name, Uname, Email, Company, Password, CreationDate, CreationTime ) values ('" + name + "','" + user + "','" + email + "','" + company + "', '" + pwd + "',  CURDATE() ,  CURTIME() )" );
+    int i = st.executeUpdate("insert into user_details(Name,Email, Company, Password,  CreationTime, Uname, CreationDate ) values ('" + name + "','" + user + "','" + email + "','" + company + "', '" + pwd + "',  CURDATE() ,  CURTIME() )" );
     System.out.println("i:::"+i);
     if (i>0) {
         //session.setAttribute("userid", user);
