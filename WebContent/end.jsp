@@ -23,7 +23,7 @@ Map<String, String[]> map = request.getParameterMap();
 System.out.println("Map :: "+map);
 
 Test t = new Test();
-int uid = (Integer)session.getAttribute("UID");
+int uid = (Integer)session.getAttribute("ID");
 t.insertAnswersinDB(map, uid);
 
 %>
