@@ -1,0 +1,36 @@
+{
+  "Type":"AWS::ECS::TaskDefinition",
+      "Properties":{
+        "Family":{
+          "Fn::Join":[
+            "",
+            [
+              {
+                "Ref":"AWS::StackName"
+              },
+              "-ecs-task-cloud"
+            ]
+          ]
+        },
+        "ContainerDefinitions":[
+          {
+            "Name":"ECS-Container",
+            "Cpu":"10",
+            "Command":[ 
+              
+            ],
+            "EntryPoint":[
+              
+            ],
+            "Essential":"true",
+            "Image":"%REPOSITORY_URI%:v_%BUILD_NUMBER%",
+            "Memory":"500",
+            "PortMappings": [
+          { "HostPort": 8080, 
+            "ContainerPort": 8080 }
+        ]
+          },
+          
+         
+  ]
+    }
