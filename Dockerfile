@@ -1,13 +1,8 @@
-FROM alpine:3.4
+FROM java
+MAINTAINER Test
 
-RUN apk --update add nginx php5-fpm && \
-    mkdir -p /var/log/nginx && \
-    touch /var/log/nginx/access.log && \
-    mkdir -p /run/nginx
-
-ADD www /www
-ADD nginx.conf /etc/nginx/
-ADD php-fpm.conf /etc/php5/php-fpm.conf
-
-EXPOSE 80
-CMD php-fpm -d variables_order="EGPCS" && (tail -F /var/log/nginx/access.log &) && exec nginx -g "daemon off;"
+RUN curl -O http://archive.apache.org/dist/tomcat/tomcat-7/v7.0.55/bin/apache-tomcat-7.0.55.tar.gz
+RUN tar xzf apache-tomcat-7.0.55.tar.gz
+ADD CustomerOnBoard-0.0.1-20170508.203406-3.war apache-tomcat-7.0.55/webapps/
+CMD apache-tomcat-7.0.55/bin/startup.sh && tail -f apache-tomcat-7.0.55/logs/catalina.out
+EXPOSE 8080
