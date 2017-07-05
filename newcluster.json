@@ -1,7 +1,7 @@
 {
   "AWSTemplateFormatVersion":"2010-09-09",
+  "Description": "AWS CloudFormation template to create resources required to run tasks on an ECS cluster.",
   "Parameters":{
-
     "ClusterName": {
       "Description": "The ECS Cluster Name",
       "Type": "String"
@@ -47,7 +47,13 @@
       "Default":"2",
       "Description":"Number of instances to launch in your ECS cluster."
     },
-  
+    
+   "SourceCidr": {
+      "Type": "String",
+      "Description": "Optional - CIDR/IP range for EcsPort - defaults to 0.0.0.0/0",
+      "Default": "0.0.0.0/0"
+    },
+    
     "MaxSize":{
       "Type":"Number",
       "Default":"2",
@@ -194,10 +200,7 @@
                 {
                   "Ref":"AWS::Region"
                 },
-                "sudo yum update -y ecs-init\n",
-                "sudo docker run -i -t -p 8080:8080 531227887946.dkr.ecr.eu-central-1.amazonaws.com/awsdevops:tomcat\n",
-                                " cd usr/share/tomcat7\n",
-                                "tomcat7 start\n"
+                "sudo yum update -y ecs-init\n"
               ]
             ]
           }
