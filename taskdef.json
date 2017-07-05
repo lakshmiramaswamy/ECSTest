@@ -1,15 +1,5 @@
 {
-        "Family":{
-          "Fn::Join":[
-            "",
-            [
-              {
-                "Ref":"AWS::StackName"
-              },
-              "-ecs-task-cloud"
-            ]
-          ]
-        },
+        "Family":"ECSTest",
         "ContainerDefinitions":[
           {
             "Name":"ECS-Container",
