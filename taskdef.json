@@ -1,6 +1,4 @@
 {
-  "Type":"AWS::ECS::TaskDefinition",
-      "Properties":{
         "Family":{
           "Fn::Join":[
             "",
@@ -29,8 +27,6 @@
           { "HostPort": 8080, 
             "ContainerPort": 8080 }
         ]
-          },
-          
-         
+          }     
   ]
     }
