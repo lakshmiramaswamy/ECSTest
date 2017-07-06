@@ -1,5 +1,5 @@
 {
-        "family":"ECSTest",
+        "family":"ECSTask",
         "containerDefinitions":[
           {
             "name":"ECS_Container",
