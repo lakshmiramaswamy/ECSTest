@@ -2,7 +2,7 @@
         "Family":"ECSTest",
         "ContainerDefinitions":[
           {
-            "Name":"ECS-Container",
+            "Name":"ECS_Container",
             "Cpu":"10",
             "Command":[ 
               
