@@ -3,16 +3,16 @@
         "containerDefinitions":[
           {
             "name":"ECS_Container",
-            "cpu":"10",
+            "cpu":10,
             "command":[ 
               
             ],
             "entryPoint":[
               
             ],
-            "essential":"true",
+            "essential":true,
             "image":"%REPOSITORY_URI%:v_%BUILD_NUMBER%",
-            "memory":"500",
+            "memory":500,
             "portMappings": [
           { "hostPort": 8080, 
             "containerPort": 8080 }
