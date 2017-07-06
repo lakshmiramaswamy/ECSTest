@@ -1,6 +1,6 @@
 {
         "Family":"ECSTest",
-        "ContainerDefinitions":[
+        "containerDefinitions":[
           {
             "Name":"ECS_Container",
             "Cpu":"10",
