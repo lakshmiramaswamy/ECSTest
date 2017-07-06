@@ -265,14 +265,14 @@
   },
   
      "service": {
-      "Type": "AWS::ECS::Service", 
-      "Properties": {
-        "Cluster": {
-          "Ref": "ECSCluster"
+      "type": "AWS::ECS::Service", 
+      "properties": {
+        "cluster": {
+          "ref": "ECSCluster"
         }, 
-        "DesiredCount": "1", 
-        "TaskDefinition": {
-          "Ref": "taskdefinition"
+        "desiredCount": "1", 
+        "taskDefinition": {
+          "ref": "taskdefinition"
         }
       }
     }
