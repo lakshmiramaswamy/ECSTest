@@ -1,21 +1,21 @@
 {
-        "Family":"ECSTest",
+        "family":"ECSTest",
         "containerDefinitions":[
           {
-            "Name":"ECS_Container",
-            "Cpu":"10",
-            "Command":[ 
+            "name":"ECS_Container",
+            "cpu":"10",
+            "command":[ 
               
             ],
-            "EntryPoint":[
+            "entryPoint":[
               
             ],
-            "Essential":"true",
-            "Image":"%REPOSITORY_URI%:v_%BUILD_NUMBER%",
-            "Memory":"500",
-            "PortMappings": [
-          { "HostPort": 8080, 
-            "ContainerPort": 8080 }
+            "essential":"true",
+            "image":"%REPOSITORY_URI%:v_%BUILD_NUMBER%",
+            "memory":"500",
+            "portMappings": [
+          { "hostPort": 8080, 
+            "containerPort": 8080 }
         ]
           }     
   ]
