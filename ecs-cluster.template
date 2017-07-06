@@ -1,0 +1,281 @@
+{
+  "AWSTemplateFormatVersion":"2010-09-09",
+  "Description": "AWS CloudFormation template to create resources required to run tasks on an ECS cluster.",
+  "Parameters":{
+    "ClusterName": {
+      "Description": "The ECS Cluster Name",
+      "Type": "String"
+    },
+  
+  "KeyName":{
+      "Type":"AWS::EC2::KeyPair::KeyName",
+      "Description":"Name of an existing EC2 KeyPair to enable SSH access to the ECS instances.",
+      "Default" : "DevOps_Frankfurt"
+    },
+   
+    "VpcId":{
+      "Type":"AWS::EC2::VPC::Id",
+      "Description":"Select a VPC that allows instances to access the Internet.",
+      "Default" : "vpc-b547c6dd"
+    },
+    
+    "AvailabilityZone": {
+      "Type": "String",
+      "Default": "eu-central-1a"
+    },
+   
+    "AmiId" : {
+      "Type" : "String",
+      "Description" : "Amazon ECS Optimized AMI",
+      "Default" : "ami-085e8a67"
+    },
+   
+     "ECSSecurityGroups" :{
+            "Type": "String",
+            "Description":"ECS Security Groups",
+            "Default" : "sg-2097334b"
+        },
+   
+     "SubnetId":{
+      "Type":"List<AWS::EC2::Subnet::Id>",
+      "Description":"Select subnets in your selected VPC.",
+      "Default" : "subnet-70f8b818"
+    },
+    
+    "DesiredCapacity":{
+      "Type":"Number",
+      "Default":"2",
+      "Description":"Number of instances to launch in your ECS cluster."
+    },
+    
+   "SourceCidr": {
+      "Type": "String",
+      "Description": "Optional - CIDR/IP range for EcsPort - defaults to 0.0.0.0/0",
+      "Default": "0.0.0.0/0"
+    },
+    
+    "MaxSize":{
+      "Type":"Number",
+      "Default":"2",
+      "Description":"Maximum number of instances that can be launched in your ECS cluster."
+    },
+
+    "EC2InstanceImagePath": {
+            "Type": "String",
+            "Description": "ECS Instance image path",
+            "Default": "531227887946.dkr.ecr.eu-central-1.amazonaws.com/awsdevops:tomcat"
+        },
+   
+    "ECSContainerInstanceIAMRole" : {
+    "Type" : "String",
+    "Default" : "ecsInstanceRole"
+    },
+
+   "InstanceType":{
+      "Description":"EC2 instance type",
+      "Type":"String",
+      "Default":"t2.micro",
+      "AllowedValues":[
+        "t2.micro",
+        "t2.small",
+        "t2.medium",
+        "t2.large",
+        "m3.medium",
+        "m3.large",
+        "m3.xlarge",
+        "m3.2xlarge",
+        "m4.large",
+        "m4.xlarge",
+        "m4.2xlarge",
+        "m4.4xlarge",
+        "m4.10xlarge",
+        "c4.large",
+        "c4.xlarge",
+        "c4.2xlarge",
+        "c4.4xlarge",
+        "c4.8xlarge",
+        "c3.large",
+        "c3.xlarge",
+        "c3.2xlarge",
+        "c3.4xlarge",
+        "c3.8xlarge",
+        "r3.large",
+        "r3.xlarge",
+        "r3.2xlarge",
+        "r3.4xlarge",
+        "r3.8xlarge",
+        "i2.xlarge",
+        "i2.2xlarge",
+        "i2.4xlarge",
+        "i2.8xlarge"
+      ],
+      "ConstraintDescription":"Please choose a valid instance type."
+    }
+  },
+ 
+  "Mappings":{
+    "AWSRegionToAMI":{
+      "us-east-1":{
+        "AMIID":"ami-eca289fb"
+      },
+      "us-east-2":{
+        "AMIID":"ami-446f3521"
+      },
+      "us-west-1":{
+        "AMIID":"ami-9fadf8ff"
+      },
+      "us-west-2":{
+        "AMIID":"ami-7abc111a"
+      },
+      "eu-west-1":{
+        "AMIID":"ami-a1491ad2"
+      },
+      "eu-central-1":{
+        "AMIID":"ami-54f5303b"
+      },
+      "ap-northeast-1":{
+        "AMIID":"ami-9cd57ffd"
+      },
+      "ap-southeast-1":{
+        "AMIID":"ami-a900a3ca"
+      },
+      "ap-southeast-2":{
+        "AMIID":"ami-5781be34"
+      }
+    }
+  },
+ 
+"Resources":{
+    "ECSCluster":{
+    "Type" : "AWS::ECS::Cluster",
+    "Properties":
+    {
+    "ClusterName":"ECSCluster"
+  }
+  },
+
+ "EcsInstanceLc": {
+            "Type": "AWS::AutoScaling::LaunchConfiguration",
+          
+            "Properties": {
+                "ImageId": {
+                    "Ref": "AmiId"
+                },
+                 
+                "InstanceType": {
+                    "Ref": "InstanceType"
+                },
+
+                "AssociatePublicIpAddress": true,
+                "IamInstanceProfile" : {
+                  "Ref" : "ECSContainerInstanceIAMRole"
+                },
+                 "KeyName": {
+                    "Ref": "KeyName"
+                },
+                "SecurityGroups": [
+                    {
+                        "Ref": "EcsSecurityGroup"
+                    }
+                ],
+         "UserData":{
+          "Fn::Base64":{
+            "Fn::Join":[
+              "",
+              [
+                "#!/bin/bash -xe\n",
+                "echo ECS_CLUSTER=",
+                {
+                  "Ref":"ECSCluster"
+                },
+                " >> /etc/ecs/ecs.config\n",
+                "yum install -y aws-cfn-bootstrap\n",
+                "/opt/aws/bin/cfn-signal -e $? ",
+                "         --stack ",
+                {
+                  "Ref":"AWS::StackName"
+                },
+                "         --resource ECSAutoScalingGroup ",
+                "         --region ",
+                {
+                  "Ref":"AWS::Region"
+                },
+                "sudo yum update -y ecs-init\n"
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "EcsSecurityGroup":{
+      "Type":"AWS::EC2::SecurityGroup",
+      "Properties":{
+        "GroupDescription":"ECS Security Group",
+        "VpcId":{
+          "Ref":"VpcId"
+        }
+      }
+    },
+    "EcsSecurityGroupHTTPinbound":{
+      "Type":"AWS::EC2::SecurityGroupIngress",
+      "Properties":{
+        "GroupId":{
+          "Ref":"EcsSecurityGroup"
+        },
+        "IpProtocol":"tcp",
+        "FromPort":"80",
+        "ToPort":"80",
+        "CidrIp":"0.0.0.0/0"
+      }
+    },
+    "EcsSecurityGroupSSHinbound":{
+      "Type":"AWS::EC2::SecurityGroupIngress",
+      "Properties":{
+        "GroupId":{
+          "Ref":"EcsSecurityGroup"
+        },
+        "IpProtocol":"tcp",
+        "FromPort":"22",
+        "ToPort":"22",
+        "CidrIp":"0.0.0.0/0"
+      }
+    },
+
+  "ECSAutoScalingGroup": {
+    "Type" : "AWS::AutoScaling::AutoScalingGroup",
+    "Properties" : {
+      "AvailabilityZones": [
+          {
+            "Ref": "AvailabilityZone"
+          }
+        ],
+      "LaunchConfigurationName" : { "Ref" : "EcsInstanceLc" },
+      "VPCZoneIdentifier" : { "Ref" : "SubnetId" },
+      "MinSize" : "1",
+      "MaxSize" : "3",      
+      "DesiredCapacity" : "2",
+     
+      "Tags" : [ {
+               "Key" : "Name",
+               "Value" : "ECS - EC2 Instances Optimized",
+               "PropagateAtLaunch" : "true"
+            }
+          ]
+    }
+  },
+  
+     "service": {
+      "type": "AWS::ECS::Service", 
+      "properties": {
+        "cluster": {
+          "ref": "ECSCluster"
+        }, 
+        "desiredCount": "1", 
+        "taskDefinition": {
+          "ref": "taskdefinition"
+        }
+      }
+    }
+
+ } 
+}
