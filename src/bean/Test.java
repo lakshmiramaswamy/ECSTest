@@ -37,11 +37,11 @@ public class Test{
 	{
 		Connection cx = null;
 		MysqlDataSource dataSource = new MysqlDataSource();
-		dataSource.setUser("root");
-		dataSource.setPassword("root");
+		dataSource.setUser("ssubraman224");
+		dataSource.setPassword("devopsblack");
 		dataSource.setServerName("localhost");
 		dataSource.setPortNumber(3306);
-		dataSource.setDatabaseName("customer_onboarding");
+		dataSource.setDatabaseName("MyDatabaseBlack");
 		 cx = dataSource.getConnection();
 		 System.out.println("CONNECTION SUCCESSFULL");
 		
