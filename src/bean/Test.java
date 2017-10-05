@@ -36,14 +36,14 @@ public class Test{
 	public Connection getConnection() throws SQLException
 	{
 		String url = "jdbc:mysql://devopstest.c9bzmufpyffq.eu-central-1.rds.amazonaws.com:3306/";
-		Connection cx = null;
-		MysqlDataSource dataSource = new MysqlDataSource();
-		dataSource.setUser("ssubraman224");
-		dataSource.setPassword("devopsblack");
-		dataSource.setServerName("localhost");
-		dataSource.setPortNumber(3306);
-		dataSource.setDatabaseName("MyDatabaseBlack");
-		Connection cx = DriverManager.getConnection(url + 'MyDatabaseBlack', 'ssubraman224', 'devopsblack');
+		//Connection cx = null;
+		String userName = "ssubraman224";
+		String password = "devopsblack";
+		String dbName = "MyDatabaseBlack";
+		String driver = "com.mysql.jdbc.Driver";
+		Connection connection = DriverManager.getConnection(url + dbName, userName, password);
+
+		Connection cx = DriverManager.getConnection(url + dbName, userName, password);
 		 //cx = dataSource.getConnection();
 		 System.out.println("CONNECTION SUCCESSFULL");
 		
