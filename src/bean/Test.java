@@ -35,6 +35,7 @@ public class Test{
 		
 	public Connection getConnection() throws SQLException
 	{
+		String url = "jdbc:mysql://devopstest.c9bzmufpyffq.eu-central-1.rds.amazonaws.com:3306/";
 		Connection cx = null;
 		MysqlDataSource dataSource = new MysqlDataSource();
 		dataSource.setUser("ssubraman224");
@@ -42,7 +43,8 @@ public class Test{
 		dataSource.setServerName("localhost");
 		dataSource.setPortNumber(3306);
 		dataSource.setDatabaseName("MyDatabaseBlack");
-		 cx = dataSource.getConnection();
+		Connection cx = DriverManager.getConnection(url + 'MyDatabaseBlack', 'ssubraman224', 'devopsblack');
+		 //cx = dataSource.getConnection();
 		 System.out.println("CONNECTION SUCCESSFULL");
 		
 		return cx;
