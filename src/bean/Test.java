@@ -41,7 +41,7 @@ public class Test{
 		String password = "devopsblack";
 		String dbName = "MyDatabaseBlack";
 		String driver = "com.mysql.jdbc.Driver";
-		Connection connection = DriverManager.getConnection(url + dbName, userName, password);
+		//Connection connection = DriverManager.getConnection(url + dbName, userName, password);
 
 		Connection cx = DriverManager.getConnection(url + dbName, userName, password);
 		 //cx = dataSource.getConnection();
