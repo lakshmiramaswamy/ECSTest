@@ -43,7 +43,7 @@ public class Test{
 		String dbName = "MyDatabaseBlack";
 		String driver = "com.mysql.jdbc.Driver";
 		//Connection connection = DriverManager.getConnection(url + dbName, userName, password);
-		Class.forName(driver);
+		
 
 		Connection cx = DriverManager.getConnection(url + dbName, userName, password);
 		 //cx = dataSource.getConnection();
