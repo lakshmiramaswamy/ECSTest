@@ -11,7 +11,7 @@
               
             ],
             "essential":true,
-            "image":"%REPOSITORY_URI%:v_%BUILD_NUMBER%",
+            "image":"%REPOSITORY_URI%:latest",
             "memory":500,
             "portMappings": [
           { "hostPort": 8080, 
