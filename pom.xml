@@ -17,6 +17,7 @@
    <configuration>
           <warSourceDirectory>WebContent</warSourceDirectory>
           <failOnMissingWebXml>false</failOnMissingWebXml>
+	   <path>/CustomerOnboard</path>
         </configuration>
 </plugin>
 <plugin>
